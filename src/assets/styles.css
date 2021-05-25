@@ -1,0 +1,53 @@
+.nav {
+  height: 50px;
+}
+
+.color-black {
+  color: #333333;
+}
+
+.background-black {
+  background-color: #333333;
+}
+
+.color-green {
+  color: #339a99;
+}
+
+.background-green {
+  background-color: #339a99;
+}
+
+.color-blue {
+  color: #669acc;
+}
+
+.background-blue {
+  background-color: #669acc;
+}
+
+.color-red {
+  color: #9a0200;
+}
+
+.background-red {
+  background-color: #9a0200;
+}
+
+.color-orange {
+  color: #f78d54;
+}
+
+.background-orange {
+  background-color: #f78d54;
+}
+
+.color-pink {
+  color: #cd6667;
+}
+
+.background-pink {
+  background-color: #cd6667;
+}
+
+/*# sourceMappingURL=styles.css.map */
