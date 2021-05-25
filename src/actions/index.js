@@ -3,7 +3,7 @@ const actions = { FETCH_FOODS };
 
 const fetchFoods = (foods) => (
   {
-    action: FETCH_FOODS,
+    type: FETCH_FOODS,
     foods,
   }
 );

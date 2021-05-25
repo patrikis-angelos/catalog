@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import foodsReducer from './foods';
 
-const rootReducer = () => combineReducers({
+const rootReducer = combineReducers({
   foods: foodsReducer,
 });
 

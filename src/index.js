@@ -8,7 +8,14 @@ import './assets/reset.css';
 import './assets/styles.css';
 
 const state = {
-  foods: [],
+  foods: [
+    {
+      title: '',
+      image: '',
+      ingridients: [],
+      cusine: '',
+    },
+  ],
 };
 
 const store = createStore(rootReducer, state);
