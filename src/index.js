@@ -9,7 +9,10 @@ import './assets/styles.css';
 
 const state = {
   foods: [],
-  filters: {},
+  filters: {
+    q: '',
+    cuisineType: '',
+  },
 };
 
 const store = createStore(rootReducer, state);

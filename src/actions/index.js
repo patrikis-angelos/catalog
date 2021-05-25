@@ -9,10 +9,11 @@ const fetchFoods = (foods) => (
   }
 );
 
-const changeFilters = (filters) => (
+const changeFilters = (filter, value) => (
   {
     type: CHANGE_FILTERS,
-    filters,
+    filter,
+    value,
   }
 );
 
