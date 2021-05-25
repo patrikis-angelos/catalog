@@ -1,6 +1,6 @@
 import actions from '../actions/index';
 
-const { FETCH_FOODS } = actions
+const { FETCH_FOODS } = actions;
 
 const foodsReducer = (foodState = [], action) => {
   switch (action.type) {
@@ -10,6 +10,6 @@ const foodsReducer = (foodState = [], action) => {
     default:
       return foodState;
   }
-}
+};
 
 export default foodsReducer;
