@@ -10,10 +10,11 @@ import './assets/styles.css';
 const state = {
   foods: [
     {
+      id: 1,
       title: '',
       image: '',
       ingridients: [],
-      cusine: '',
+      cuisine: '',
     },
   ],
 };

@@ -50,4 +50,32 @@
   background-color: #cd6667;
 }
 
+.food {
+  margin-top: 40px;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: calc(23%);
+}
+
+.img {
+  display: block;
+  width: 70%;
+}
+
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
 /*# sourceMappingURL=styles.css.map */
