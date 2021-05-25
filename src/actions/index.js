@@ -1,5 +1,6 @@
 const FETCH_FOODS = 'FETCH_FOODS';
-const actions = { FETCH_FOODS };
+const CHANGE_FILTERS = 'CHANGE_FILTERS';
+const actions = { FETCH_FOODS, CHANGE_FILTERS };
 
 const fetchFoods = (foods) => (
   {
@@ -8,5 +9,12 @@ const fetchFoods = (foods) => (
   }
 );
 
+const changeFilters = (filters) => (
+  {
+    type: CHANGE_FILTERS,
+    filters,
+  }
+);
+
 export default actions;
-export { fetchFoods };
+export { fetchFoods, changeFilters };
