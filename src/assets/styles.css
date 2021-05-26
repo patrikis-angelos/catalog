@@ -5,6 +5,7 @@
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
+  z-index: 2;
 }
 
 h1 {
@@ -57,6 +58,14 @@ h1 {
 
 .background-pink {
   background-color: #cd6667;
+}
+
+.color-white {
+  color: white;
+}
+
+.background-white {
+  background-color: white;
 }
 
 .submit:hover {
@@ -134,6 +143,10 @@ body {
   font-family: "Lilita One", cursive;
 }
 
+.sans {
+  font-family: sans-serif;
+}
+
 .search-bar {
   display: block;
   width: 60%;
@@ -195,7 +208,14 @@ body {
 }
 
 .m-t-10 {
-  margin-top: 15px;
+  margin-top: 10px;
+}
+
+.details {
+  padding-top: 50px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -12,6 +12,7 @@ $colors: (
   red: $red,
   orange: $orange,
   pink: $pink,
+  white: white,
 );
 
 @each $key, $value in $colors {

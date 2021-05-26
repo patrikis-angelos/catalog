@@ -9,7 +9,6 @@ const FoodDetails = (props) => {
   const id = location.pathname.split('/')[2];
 
   const setFood = async (params, from, to) => {
-    console.log(params);
     const meal = await getData(params, from, to);
     fetchFoods(meal);
   };
@@ -20,9 +19,28 @@ const FoodDetails = (props) => {
   }, []);
 
   const meal = foods[0] || [];
+  let ingredientList = '';
+  if (meal.ingredients) {
+    ingredientList = meal.ingredients.map((ing) => <p key={ing.text}>{ing.text}</p>);
+  }
+  let nutrients = '';
+  if (meal.totalNutrients) {
+    nutrients = Object.keys(meal.totalNutrients)
+      .map((nut) => (
+        <p key={meal.totalNutrients[nut].label}>
+          {`${meal.totalNutrients[nut].label}: ${meal.totalNutrients[nut].quantity}`}
+        </p>
+      ));
+  }
 
   return (
-    <div>{meal.title}</div>
+    <div className="details">
+      <h2>{meal.title}</h2>
+      <img src={meal.image} alt="Food" />
+      <div>{ingredientList}</div>
+      <div>{nutrients}</div>
+      <a href={meal.url}>Recipe</a>
+    </div>
   );
 };
 
