@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchFoods, changeFilters } from '../actions/index';
-import serialize from '../assets/logic/serialize';
+import getData from '../assets/logic/fetch';
 import Food from '../components/Food';
 import Nav from '../components/Nav';
 
@@ -10,35 +10,9 @@ const FoodsList = (props) => {
   const {
     foods, filters, fetchFoods, changeFilters,
   } = props;
-  console.log(filters);
 
-  const getData = async (ingredient, from, to) => {
-    const parameters = {
-      q: ingredient,
-      app_id: process.env.REACT_APP_ID,
-      app_key: process.env.REACT_APP_KEY,
-      from,
-      to,
-    };
-    const url = serialize('https://api.edamam.com/search?', parameters);
-    const response = await fetch(url)
-      .then((r) => r.json());
-    const foodsArray = [];
-    console.log(response);
-    for (let i = 0; i < response.hits.length; i += 1) {
-      const {
-        label, image, ingredients, cuisineType,
-      } = response.hits[i].recipe;
-      const id = (response.hits[i].recipe.uri).split('_')[1];
-      const cuisine = cuisineType ? cuisineType[0] : '';
-      foodsArray.push({
-        id,
-        title: label,
-        image,
-        ingredients,
-        cuisine,
-      });
-    }
+  const setFoods = async (ingredient, cuisine, from, to) => {
+    const foodsArray = await getData(ingredient, cuisine, from, to);
     fetchFoods(foodsArray);
   };
 
@@ -46,26 +20,29 @@ const FoodsList = (props) => {
     changeFilters(filter, value);
   };
 
+  const handleSubmit = () => {
+    const { q, cuisineType } = filters;
+    setFoods(q, cuisineType, 0, 99);
+  };
+
   useEffect(() => {
-    getData('The most delicious', 0, 99);
+    const { q, cuisineType } = filters;
+    setFoods(q, cuisineType, 0, 99);
   }, []);
 
-  const list = foods.map((food) => {
-    const ingredients = food.ingredients || [];
-    return (
-      <Food
-        title={food.title}
-        image={food.image}
-        ingredients={ingredients}
-        cuisine={food.cuisine}
-        key={food.id}
-      />
-    );
-  });
+  const list = foods.map((food) => (
+    <Food
+      id={food.id}
+      title={food.title}
+      image={food.image}
+      cuisine={food.cuisine}
+      key={food.id}
+    />
+  ));
 
   return (
     <>
-      <Nav filterHandler={handleFilterChange} />
+      <Nav filterHandler={handleFilterChange} submitHandler={handleSubmit} />
       <div className="foods-container flex wrap space-between">
         {list}
       </div>
@@ -75,7 +52,10 @@ const FoodsList = (props) => {
 
 FoodsList.propTypes = {
   foods: PropTypes.arrayOf(PropTypes.object).isRequired,
-  filters: PropTypes.shape({}).isRequired,
+  filters: PropTypes.shape({
+    q: PropTypes.string.isRequired,
+    cuisineType: PropTypes.string.isRequired,
+  }).isRequired,
   fetchFoods: PropTypes.func.isRequired,
   changeFilters: PropTypes.func.isRequired,
 };

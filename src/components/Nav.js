@@ -2,12 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Nav = (props) => {
-  const { filterHandler } = props;
+  const { filterHandler, submitHandler } = props;
 
   const handleFilterChange = (e) => {
     const filter = e.target.id;
     const value = e.target.value === 'Cuisine' ? '' : e.target.value;
     filterHandler(filter, value);
+  };
+
+  const handleSubmit = () => {
+    submitHandler();
   };
 
   return (
@@ -22,8 +26,9 @@ const Nav = (props) => {
         <select id="cuisineType">
           <option>Cuisine</option>
           <option>Italian</option>
-          <option>Mediterenian</option>
+          <option>Mediterranean</option>
         </select>
+        <button type="button" onClick={handleSubmit}>Search</button>
       </div>
     </nav>
   );
@@ -31,6 +36,7 @@ const Nav = (props) => {
 
 Nav.propTypes = {
   filterHandler: PropTypes.func.isRequired,
+  submitHandler: PropTypes.func.isRequired,
 };
 
 export default Nav;
