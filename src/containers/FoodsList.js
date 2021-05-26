@@ -34,6 +34,8 @@ const FoodsList = (props) => {
       title={food.title}
       image={food.image}
       cuisine={food.cuisine}
+      dish={food.dishType}
+      meal={food.mealType}
       key={food.id}
     />
   ));
@@ -41,7 +43,7 @@ const FoodsList = (props) => {
   return (
     <>
       <SearchBar filterHandler={handleFilterChange} submitHandler={handleSubmit} />
-      <div className="foods-container flex wrap">
+      <div className="flex wrap">
         {list}
       </div>
     </>

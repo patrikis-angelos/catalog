@@ -1,17 +1,41 @@
-.foods-container {
-}
-
 .food {
-  margin-top: 40px;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: calc(23%);
+  margin-top: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(25% - 20px);
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: 1px;
+  padding: 10px;
 }
 
 .img {
   display: block;
   width: 70%;
+  margin-top: 30px;
 }
 
-.img-container {
+.title {
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+  .food {
+    width: calc(33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .food {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .food {
+    width: calc(100% - 20px);
+  }
 }

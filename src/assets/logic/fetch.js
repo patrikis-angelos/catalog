@@ -20,7 +20,7 @@ const getData = async (params, from, to) => {
   const foodsArray = [];
   for (let i = 0; i < response.hits.length; i += 1) {
     const {
-      label, image, ingredients, cuisineType,
+      label, image, ingredients, cuisineType, dishType, mealType,
     } = response.hits[i].recipe;
     const id = (response.hits[i].recipe.uri).split('_')[1];
     const cuisine = cuisineType ? cuisineType[0] : '';
@@ -30,6 +30,8 @@ const getData = async (params, from, to) => {
       image,
       ingredients,
       cuisine,
+      dishType,
+      mealType,
     });
   }
   return foodsArray;

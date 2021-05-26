@@ -63,17 +63,44 @@ h1 {
 }
 
 .food {
-  margin-top: 40px;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: calc(23%);
+  margin-top: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(25% - 20px);
+  border: 1px solid #e4e4e4;
+  border-radius: 1px;
+  padding: 10px;
 }
 
 .img {
   display: block;
   width: 70%;
+  margin-top: 30px;
 }
 
+.title {
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+  .food {
+    width: calc(33% - 20px);
+  }
+}
+@media (max-width: 768px) {
+  .food {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 480px) {
+  .food {
+    width: calc(100% - 20px);
+  }
+}
 .flex {
   display: flex;
 }
@@ -155,6 +182,10 @@ body {
   width: 19%;
   margin-top: 20px;
   height: 30px;
+}
+
+.m-t-10 {
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */
