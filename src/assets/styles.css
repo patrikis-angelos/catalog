@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 .nav {
+  width: 100%;
   height: 50px;
   align-items: center;
   padding-left: 20px;
@@ -125,6 +126,10 @@ h1 {
   position: absolute;
 }
 
+.fixed {
+  position: fixed;
+}
+
 body {
   font-family: "Lilita One", cursive;
 }
@@ -138,6 +143,11 @@ body {
   text-align: center;
   border-radius: 0;
   border: none;
+}
+
+.search-area {
+  width: 100%;
+  padding-top: 50px;
 }
 
 .filters {

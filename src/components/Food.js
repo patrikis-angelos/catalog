@@ -6,10 +6,8 @@ const Food = (props) => {
     id, title, image, cuisine, dish, meal,
   } = props;
 
-  let dishList = dish || [];
-  dishList = dishList.map((d) => <li key={`${title}${d}`}>{d}</li>);
+  const dishList = dish.map((d) => <li key={`${title}${d}`}>{d}</li>);
   const cuisineText = cuisine || 'world';
-  const mealText = meal || 'anytime';
 
   return (
     <div className="food">
@@ -19,7 +17,7 @@ const Food = (props) => {
       <ul className="m-t-10">
         {dishList}
       </ul>
-      <p className="m-t-10">{`Best for:  ${mealText}`}</p>
+      <p className="m-t-10">{`Best for:  ${meal}`}</p>
     </div>
   );
 };
@@ -28,9 +26,15 @@ Food.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  cuisine: PropTypes.string.isRequired,
-  dish: PropTypes.string.isRequired,
-  meal: PropTypes.string.isRequired,
+  cuisine: PropTypes.string,
+  dish: PropTypes.arrayOf(PropTypes.string.isRequired),
+  meal: PropTypes.arrayOf(PropTypes.string.isRequired),
+};
+
+Food.defaultProps = {
+  cuisine: 'world',
+  dish: [],
+  meal: ['anytime'],
 };
 
 export default Food;

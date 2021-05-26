@@ -24,7 +24,7 @@ const SearchBar = (props) => {
   const mealOptions = mealValues.map((option) => <option key={option}>{option}</option>);
 
   return (
-    <div>
+    <div id="search" className="search-area">
       <div
         className="filters background-black"
         onChange={(e) => handleFilterChange(e)}
