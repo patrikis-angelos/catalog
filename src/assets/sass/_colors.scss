@@ -1,4 +1,4 @@
-$black: #333333;
+$black: #333;
 $green: #339a99;
 $blue: #669acc;
 $red: #9a0200;
@@ -22,4 +22,8 @@ $colors: (
   .background-#{"" + $key} {
     background-color: $value;
   }
+}
+
+.submit:hover {
+  background-color: white;
 }

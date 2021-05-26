@@ -5,7 +5,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  border-radius: 0px;
+  border-radius: 0;
   border: none;
 }
 
@@ -29,7 +29,7 @@
   height: 30px;
   width: 100%;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   appearance: none;
 }
 
@@ -42,4 +42,13 @@
   border-right: 5px solid white;
   top: 10px;
   right: 10px;
+}
+
+.submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 19%;
+  margin-top: 20px;
+  height: 30px;
 }

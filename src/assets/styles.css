@@ -11,11 +11,11 @@ h1 {
 }
 
 .color-black {
-  color: #333333;
+  color: #333;
 }
 
 .background-black {
-  background-color: #333333;
+  background-color: #333;
 }
 
 .color-green {
@@ -56,6 +56,10 @@ h1 {
 
 .background-pink {
   background-color: #cd6667;
+}
+
+.submit:hover {
+  background-color: white;
 }
 
 .food {
@@ -105,7 +109,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  border-radius: 0px;
+  border-radius: 0;
   border: none;
 }
 
@@ -129,7 +133,7 @@ body {
   height: 30px;
   width: 100%;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   appearance: none;
 }
 
@@ -142,6 +146,15 @@ body {
   border-right: 5px solid white;
   top: 10px;
   right: 10px;
+}
+
+.submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 19%;
+  margin-top: 20px;
+  height: 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */
