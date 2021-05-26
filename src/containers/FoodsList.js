@@ -21,13 +21,11 @@ const FoodsList = (props) => {
   };
 
   const handleSubmit = () => {
-    const { q, cuisineType } = filters;
-    setFoods(q, cuisineType, 0, 99);
+    setFoods(filters, 0, 99);
   };
 
   useEffect(() => {
-    const { q, cuisineType } = filters;
-    setFoods(q, cuisineType, 0, 99);
+    setFoods(filters, 0, 99);
   }, []);
 
   const list = foods.map((food) => (
@@ -43,7 +41,7 @@ const FoodsList = (props) => {
   return (
     <>
       <SearchBar filterHandler={handleFilterChange} submitHandler={handleSubmit} />
-      <div className="foods-container flex wrap space-between">
+      <div className="foods-container flex wrap">
         {list}
       </div>
     </>

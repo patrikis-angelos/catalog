@@ -13,3 +13,33 @@
   height: 250px;
   padding-top: 50px;
 }
+
+.selection-wrapper {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.option-wrapper {
+  width: 33%;
+}
+
+.option {
+  height: 30px;
+  width: 100%;
+  border: none;
+  border-radius: 0px;
+  appearance: none;
+}
+
+.arrow {
+  width: 5px;
+  height: 10px;
+  border-top: 10px solid #888;
+  border-bottom: 10px solid white;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  top: 10px;
+  right: 10px;
+}

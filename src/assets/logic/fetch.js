@@ -1,9 +1,14 @@
 import serialize from './serialize';
 
-const getData = async (ingredient, cuisine, from, to) => {
+const getData = async (params, from, to) => {
+  const {
+    q, cuisineType, dishType, mealType,
+  } = params;
   const parameters = {
-    q: ingredient,
-    cuisineType: cuisine,
+    q,
+    cuisineType,
+    dishType,
+    mealType,
     app_id: process.env.REACT_APP_ID,
     app_key: process.env.REACT_APP_KEY,
     from,

@@ -11,8 +11,11 @@ import './assets/styles.css';
 const state = {
   foods: [],
   filters: {
-    q: 'welcome',
+    q: '',
     cuisineType: '',
+    dishType: '',
+    mealType: '',
+    diet: '',
   },
 };
 

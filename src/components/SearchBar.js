@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  cuisineValues, dishValues, mealValues, dietValues,
+  cuisineValues, dishValues, mealValues,
 } from '../assets/logic/filterValues';
+import Option from './Option';
 
 const SearchBar = (props) => {
   const { filterHandler, submitHandler } = props;
 
   const handleFilterChange = (e) => {
     const filter = e.target.id;
-    const value = e.target.value === 'Cuisine' ? '' : e.target.value;
+    const defaults = ['Cuisine', 'Dish', 'Meal'];
+    const value = defaults.includes(e.target.value) ? '' : e.target.value;
     filterHandler(filter, value);
   };
 
@@ -20,7 +22,6 @@ const SearchBar = (props) => {
   const cuisineOptions = cuisineValues.map((option) => <option key={option}>{option}</option>);
   const dishOptions = dishValues.map((option) => <option key={option}>{option}</option>);
   const mealOptions = mealValues.map((option) => <option key={option}>{option}</option>);
-  const dietOptions = dietValues.map((option) => <option key={option}>{option}</option>);
 
   return (
     <div>
@@ -29,11 +30,12 @@ const SearchBar = (props) => {
         onChange={(e) => handleFilterChange(e)}
       >
         <input className="search-bar" id="q" type="text" placeholder="Search" />
-        <select id="cuisineType">{cuisineOptions}</select>
-        <select id="dishType">{dishOptions}</select>
-        <select id="mealType">{mealOptions}</select>
-        <select id="diet">{dietOptions}</select>
-        <button type="button" onClick={handleSubmit}>Search</button>
+        <div className="selection-wrapper flex space-between">
+          <Option id="cuisineType" options={cuisineOptions} />
+          <Option id="dishType" options={dishOptions} />
+          <Option id="mealType" options={mealOptions} />
+        </div>
+        <button className="submit" type="button" onClick={handleSubmit}>Search</button>
       </div>
     </div>
   );

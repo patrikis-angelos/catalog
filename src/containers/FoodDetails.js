@@ -8,13 +8,15 @@ const FoodDetails = (props) => {
   const { foods, fetchFoods, location } = props;
   const id = location.pathname.split('/')[2];
 
-  const setFood = async (id, from, to) => {
-    const meal = await getData(id, '', from, to);
+  const setFood = async (params, from, to) => {
+    console.log(params);
+    const meal = await getData(params, from, to);
     fetchFoods(meal);
   };
 
   useEffect(() => {
-    setFood(id, 0, 1);
+    const params = { q: id };
+    setFood(params, 0, 1);
   }, []);
 
   const meal = foods[0] || [];
