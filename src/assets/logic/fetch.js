@@ -28,7 +28,6 @@ const getData = async (ingredient, cuisine, from, to) => {
     });
   }
   return foodsArray;
-  // fetchFoods(foodsArray);
 };
 
 export default getData;

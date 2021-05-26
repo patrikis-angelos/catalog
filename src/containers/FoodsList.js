@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { fetchFoods, changeFilters } from '../actions/index';
 import getData from '../assets/logic/fetch';
 import Food from '../components/Food';
-import Nav from '../components/Nav';
+import SearchBar from '../components/SearchBar';
 
 const FoodsList = (props) => {
   const {
@@ -42,7 +42,7 @@ const FoodsList = (props) => {
 
   return (
     <>
-      <Nav filterHandler={handleFilterChange} submitHandler={handleSubmit} />
+      <SearchBar filterHandler={handleFilterChange} submitHandler={handleSubmit} />
       <div className="foods-container flex wrap space-between">
         {list}
       </div>

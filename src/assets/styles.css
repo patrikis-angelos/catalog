@@ -1,5 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 .nav {
   height: 50px;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1 {
+  font-size: 32px;
 }
 
 .filters {
@@ -80,6 +88,10 @@
 
 .space-between {
   justify-content: space-between;
+}
+
+body {
+  font-family: "Lilita One", cursive;
 }
 
 /*# sourceMappingURL=styles.css.map */
