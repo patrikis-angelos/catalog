@@ -39,10 +39,14 @@ const FoodDetails = (props) => {
     <>
       <SearchBar link="/" filters={filters} filterHandler={changeFilters} clear={handleClear} />
       <div className="details">
-        <h2>{currentMeal.title}</h2>
-        <img src={currentMeal.image} alt="Food" />
-        <div>{ingredientList}</div>
-        <a href={currentMeal.url} target="_blank" rel="noreferrer">Recipe</a>
+        <h2 className="details-title">{currentMeal.title}</h2>
+        <div className="flex">
+          <img className="details-img" src={currentMeal.image} alt="Food" />
+          <div className="flex column space-between">
+            <div>{ingredientList}</div>
+            <a href={currentMeal.url} target="_blank" rel="noreferrer" className="color-green">Check the full recipe here</a>
+          </div>
+        </div>
       </div>
     </>
   );
