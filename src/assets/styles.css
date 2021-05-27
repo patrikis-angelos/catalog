@@ -94,6 +94,15 @@ h1 {
   font-size: 20px;
 }
 
+.empty {
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+  color: silver;
+  font-style: italic;
+}
+
 @media (max-width: 1024px) {
   .food {
     width: calc(33% - 20px);

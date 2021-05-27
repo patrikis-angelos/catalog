@@ -44,7 +44,7 @@ const FoodsList = (props) => {
       />
     ));
   } else {
-    list = <p>Sorry we could not find any results</p>;
+    list = <p className="empty sans">Start searching for your favourite meals!</p>;
   }
 
   return (
