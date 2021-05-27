@@ -1,16 +1,17 @@
 import { useEffect } from 'react';
-import { connect } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import getData from '../assets/logic/fetch';
-import { fetchFoods } from '../actions/index';
 
 const FoodDetails = (props) => {
-  const { foods, fetchFoods, location } = props;
+  const { meal, changeMeal } = props;
+  console.log(meal);
+  const location = useLocation();
   const id = location.pathname.split('/')[2];
 
   const setFood = async (params, from, to) => {
-    const meal = await getData(params, from, to);
-    fetchFoods(meal);
+    const [currentMeal] = await getData(params, from, to);
+    changeMeal(currentMeal);
   };
 
   useEffect(() => {
@@ -18,44 +19,36 @@ const FoodDetails = (props) => {
     setFood(params, 0, 1);
   }, []);
 
-  const meal = foods[0] || [];
+  const currentMeal = meal || [];
   let ingredientList = '';
-  if (meal.ingredients) {
-    ingredientList = meal.ingredients.map((ing) => <p key={ing.text}>{ing.text}</p>);
+  if (currentMeal.ingredients) {
+    ingredientList = currentMeal.ingredients.map((ing) => <p key={ing.text}>{ing.text}</p>);
   }
   let nutrients = '';
-  if (meal.totalNutrients) {
-    nutrients = Object.keys(meal.totalNutrients)
+  if (currentMeal.totalNutrients) {
+    nutrients = Object.keys(currentMeal.totalNutrients)
       .map((nut) => (
-        <p key={meal.totalNutrients[nut].label}>
-          {`${meal.totalNutrients[nut].label}: ${meal.totalNutrients[nut].quantity}`}
+        <p key={currentMeal.totalNutrients[nut].label}>
+          {`${currentMeal.totalNutrients[nut].label}: ${currentMeal.totalNutrients[nut].quantity}`}
         </p>
       ));
   }
 
   return (
     <div className="details">
-      <h2>{meal.title}</h2>
-      <img src={meal.image} alt="Food" />
+      <h2>{currentMeal.title}</h2>
+      <img src={currentMeal.image} alt="Food" />
       <div>{ingredientList}</div>
       <div>{nutrients}</div>
-      <a href={meal.url}>Recipe</a>
+      <a href={currentMeal.url} target="_blank" rel="noreferrer">Recipe</a>
     </div>
   );
 };
 
 FoodDetails.propTypes = {
-  foods: PropTypes.arrayOf(PropTypes.object).isRequired,
+  meal: PropTypes.shape({}).isRequired,
   location: PropTypes.shape({ pathname: PropTypes.string.isRequired }).isRequired,
-  fetchFoods: PropTypes.func.isRequired,
+  changeMeal: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => ({
-  foods: state.foods,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  fetchFoods: (foods) => dispatch(fetchFoods(foods)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(FoodDetails);
+export default FoodDetails;

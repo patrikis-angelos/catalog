@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { fetchFoods, changeFilters } from '../actions/index';
 import getData from '../assets/logic/fetch';
 import Food from '../components/Food';
 import SearchBar from '../components/SearchBar';
@@ -60,14 +58,4 @@ FoodsList.propTypes = {
   changeFilters: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => ({
-  foods: state.foods,
-  filters: state.filters,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  fetchFoods: (foods) => dispatch(fetchFoods(foods)),
-  changeFilters: (filter, value) => dispatch(changeFilters(filter, value)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(FoodsList);
+export default FoodsList;
