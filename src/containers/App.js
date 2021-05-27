@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import FoodsList from './FoodsList';
 import FoodDetails from './FoodDetails';
 import { fetchFoods, changeFilters, changeMeal } from '../actions/index';
+import storage from '../assets/logic/localStorage';
 
 function App(props) {
   const {
     foods, filters, meal, fetchFoods, changeFilters, changeMeal,
   } = props;
-  console.log(filters);
+
+  useEffect(() => {
+    storage.save(filters);
+  }, [filters]);
+
   return (
     <BrowserRouter>
       <Switch>

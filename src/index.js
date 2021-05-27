@@ -5,19 +5,15 @@ import { createStore } from 'redux';
 import App from './containers/App';
 import Nav from './components/Nav';
 import rootReducer from './reducers/index';
+import storage from './assets/logic/localStorage';
 import './assets/reset.css';
 import './assets/styles.css';
 
+const filters = storage.load();
 const state = {
   foods: [],
   meal: {},
-  filters: {
-    q: '',
-    cuisineType: '',
-    dishType: '',
-    mealType: '',
-    diet: '',
-  },
+  filters,
 };
 
 const store = createStore(rootReducer, state);
