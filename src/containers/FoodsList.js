@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import getData from '../assets/logic/fetch';
+import getData from '../assets/logic/fetchData';
 import Food from '../components/Food';
 import SearchBar from '../components/SearchBar';
 

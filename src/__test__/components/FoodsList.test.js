@@ -1,19 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import FoodDetails from '../../containers/FoodDetails';
+import FoodsList from '../../containers/FoodsList';
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useLocation: () => ({
-    pathname: 'example.com/test',
-  }),
-}));
-
-describe('FoodDetails', () => {
+describe('FoodsList', () => {
   it('renders correctly', () => {
     const tree = renderer
-      .create(<FoodDetails
-        meal={{}}
+      .create(<FoodsList
+        foods={[]}
         filters={{
           q: '',
           cuisineType: '',
@@ -21,7 +14,7 @@ describe('FoodDetails', () => {
           mealType: '',
         }}
         changeFilters={() => {}}
-        changeMeal={() => {}}
+        fetchFoods={() => {}}
         clearFilters={() => {}}
       />)
       .toJSON();

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import getData from '../assets/logic/fetch';
+import getData from '../assets/logic/fetchData';
 import SearchBar from '../components/SearchBar';
 
 const FoodDetails = (props) => {
