@@ -6,7 +6,7 @@ import {
 import Option from './Option';
 
 const SearchBar = (props) => {
-  const { filterHandler, submitHandler } = props;
+  const { link, filterHandler, submitHandler } = props;
 
   const handleFilterChange = (e) => {
     const filter = e.target.id;
@@ -35,15 +35,21 @@ const SearchBar = (props) => {
           <Option id="dishType" options={dishOptions} />
           <Option id="mealType" options={mealOptions} />
         </div>
-        <button className="submit" type="button" onClick={handleSubmit}>Search</button>
+        <a href={link} className="submit background-white sans" type="button" onClick={handleSubmit}>Search</a>
       </div>
     </div>
   );
 };
 
 SearchBar.propTypes = {
+  link: PropTypes.string,
   filterHandler: PropTypes.func.isRequired,
-  submitHandler: PropTypes.func.isRequired,
+  submitHandler: PropTypes.func,
+};
+
+SearchBar.defaultProps = {
+  link: '#search',
+  submitHandler: () => {},
 };
 
 export default SearchBar;
