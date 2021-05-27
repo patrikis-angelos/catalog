@@ -2,10 +2,10 @@
 
 exports[`Option renders correctly 1`] = `
 <div
-  className="option-wrapper flex space-between relative"
+  className="option-wrapper flex space-between relative background-white"
 >
   <select
-    className="option"
+    className="background-white option"
     defaultValue="2"
     id="cuisineType"
   >

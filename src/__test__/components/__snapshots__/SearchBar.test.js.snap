@@ -20,10 +20,10 @@ exports[`SearchBar renders correctly 1`] = `
       className="selection-wrapper flex space-between"
     >
       <div
-        className="option-wrapper flex space-between relative"
+        className="option-wrapper flex space-between relative background-white"
       >
         <select
-          className="option"
+          className="background-white option"
           defaultValue=""
           id="cuisineType"
         >
@@ -90,10 +90,10 @@ exports[`SearchBar renders correctly 1`] = `
         />
       </div>
       <div
-        className="option-wrapper flex space-between relative"
+        className="option-wrapper flex space-between relative background-white"
       >
         <select
-          className="option"
+          className="background-white option"
           defaultValue=""
           id="dishType"
         >
@@ -157,10 +157,10 @@ exports[`SearchBar renders correctly 1`] = `
         />
       </div>
       <div
-        className="option-wrapper flex space-between relative"
+        className="option-wrapper flex space-between relative background-white"
       >
         <select
-          className="option"
+          className="background-white option"
           defaultValue=""
           id="mealType"
         >

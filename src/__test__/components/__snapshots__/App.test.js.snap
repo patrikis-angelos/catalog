@@ -23,10 +23,10 @@ Object {
             class="selection-wrapper flex space-between"
           >
             <div
-              class="option-wrapper flex space-between relative"
+              class="option-wrapper flex space-between relative background-white"
             >
               <select
-                class="option"
+                class="background-white option"
                 id="cuisineType"
               >
                 <option>
@@ -92,10 +92,10 @@ Object {
               />
             </div>
             <div
-              class="option-wrapper flex space-between relative"
+              class="option-wrapper flex space-between relative background-white"
             >
               <select
-                class="option"
+                class="background-white option"
                 id="dishType"
               >
                 <option>
@@ -158,10 +158,10 @@ Object {
               />
             </div>
             <div
-              class="option-wrapper flex space-between relative"
+              class="option-wrapper flex space-between relative background-white"
             >
               <select
-                class="option"
+                class="background-white option"
                 id="mealType"
               >
                 <option>
@@ -231,10 +231,10 @@ Object {
           class="selection-wrapper flex space-between"
         >
           <div
-            class="option-wrapper flex space-between relative"
+            class="option-wrapper flex space-between relative background-white"
           >
             <select
-              class="option"
+              class="background-white option"
               id="cuisineType"
             >
               <option>
@@ -300,10 +300,10 @@ Object {
             />
           </div>
           <div
-            class="option-wrapper flex space-between relative"
+            class="option-wrapper flex space-between relative background-white"
           >
             <select
-              class="option"
+              class="background-white option"
               id="dishType"
             >
               <option>
@@ -366,10 +366,10 @@ Object {
             />
           </div>
           <div
-            class="option-wrapper flex space-between relative"
+            class="option-wrapper flex space-between relative background-white"
           >
             <select
-              class="option"
+              class="background-white option"
               id="mealType"
             >
               <option>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from "@testing-library/react";
+import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import App from '../../containers/App';
@@ -14,17 +14,17 @@ const state = {
     dishType: '',
     mealType: '',
   },
-}
+};
 
 const store = createStore(rootReducer, state);
 
 const Wrapper = ({ children }) => (
-	<Provider store={store}>{children}</Provider>
+  <Provider store={store}>{children}</Provider>
 );
 
 describe('App', () => {
   it('renders correctly', () => {
-    const tree = render(<App />, {wrapper: Wrapper})
+    const tree = render(<App />, { wrapper: Wrapper });
     expect(tree).toMatchSnapshot();
   });
 });

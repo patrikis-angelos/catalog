@@ -4,6 +4,11 @@ const storage = (() => {
   };
 
   const load = () => {
+    if (!localStorage.filters) {
+      return {
+        q: '', cuisineType: '', dishType: '', mealType: '',
+      };
+    }
     const filters = JSON.parse(localStorage.filters);
     return filters;
   };
