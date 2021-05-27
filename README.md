@@ -2,6 +2,11 @@
 
 # Catalogue
 
+This app is a catalogue of foods and drinks where the user can search for his favourite meals and apply filters on his search.
+Every meal has a details page that the user can access by clicking on the title and see the ingridients of the meal and a link to the recipe.
+The data are being pulled from the Edamam Recipies Api.
+
+![](./docs/Dailymeal.png)
 
 ## Built With
 
@@ -9,7 +14,20 @@
 - Redux
 - SCSS
 
+## [Live Version](https://daily-meal-patrick.herokuapp.com)
+
 ## Getting Started
+
+To get a local copy up and running
+
+`git clone git@github.com:patrick-angelos/catalog.git`
+`cd catalog`
+`npm install`
+`npm run start` to start the server
+
+To run the tests
+
+`npm test`
 
 ## Author
 
