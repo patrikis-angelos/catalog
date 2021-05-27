@@ -197,6 +197,7 @@ Object {
           </a>
           <button
             class="submit background-white sans"
+            id="submit"
             type="button"
           >
             Reset filters
@@ -405,6 +406,7 @@ Object {
         </a>
         <button
           class="submit background-white sans"
+          id="submit"
           type="button"
         >
           Reset filters

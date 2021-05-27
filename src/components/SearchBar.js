@@ -47,7 +47,7 @@ const SearchBar = (props) => {
           <Option id="mealType" options={mealOptions} value={filters.mealType} />
         </div>
         <a href={link} className="submit background-white sans" type="button" onClick={handleSubmit}>Search</a>
-        <button className="submit background-white sans" type="button" onClick={handleClear}>Reset filters</button>
+        <button id="submit" className="submit background-white sans" type="button" onClick={handleClear}>Reset filters</button>
       </div>
     </div>
   );

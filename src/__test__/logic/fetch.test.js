@@ -4,19 +4,21 @@ beforeEach(() => {
   jest.spyOn(global, 'fetch').mockResolvedValue({
     json: jest.fn().mockResolvedValue({
       hits: [
-        { recipe: {
-          label: '',
-          image: '',
-          ingredients: '',
-          cuisineType: '',
-          dishType: '',
-          mealType: '',
-          url: '',
-          uri: '12345_12345',
-        }}
-      ]
-    })
-  })
+        {
+          recipe: {
+            label: '',
+            image: '',
+            ingredients: '',
+            cuisineType: '',
+            dishType: '',
+            mealType: '',
+            url: '',
+            uri: '12345_12345',
+          },
+        },
+      ],
+    }),
+  });
 });
 
 afterEach(() => {
@@ -36,7 +38,7 @@ describe('getData', () => {
     expect(data[0].title).toBe('');
   });
   it('returns an empty array if it fails to fetch the data', async () => {
-    fetch.mockImplementationOnce(() => Promise.reject("Something went wrong"));
+    fetch.mockRejectedValueOnce();
     const params = {
       q: 'fish',
       cuisineType: '',

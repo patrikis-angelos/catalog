@@ -198,6 +198,7 @@ exports[`SearchBar renders correctly 1`] = `
     </a>
     <button
       className="submit background-white sans"
+      id="submit"
       onClick={[Function]}
       type="button"
     >
