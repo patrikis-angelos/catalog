@@ -14,6 +14,14 @@ function App(props) {
     foods, filters, meal, fetchFoods, changeFilters, changeMeal, clearFilters,
   } = props;
 
+  const handleClear = () => {
+    clearFilters();
+    document.querySelector('#q').value = '';
+    document.querySelector('#cuisineType').value = 'Cuisine';
+    document.querySelector('#dishType').value = 'Dish';
+    document.querySelector('#mealType').value = 'Meal';
+  };
+
   useEffect(() => {
     storage.save(filters);
   }, [filters]);
@@ -30,7 +38,7 @@ function App(props) {
               filters={filters}
               changeFilters={changeFilters}
               fetchFoods={fetchFoods}
-              clearFilters={clearFilters}
+              clearFilters={handleClear}
             />
           )}
         />
@@ -42,6 +50,7 @@ function App(props) {
               filters={filters}
               changeFilters={changeFilters}
               changeMeal={changeMeal}
+              clearFilters={handleClear}
             />
           )}
         />

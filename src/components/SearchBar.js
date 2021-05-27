@@ -7,7 +7,7 @@ import Option from './Option';
 
 const SearchBar = (props) => {
   const {
-    filters, link, filterHandler, submitHandler,
+    filters, link, filterHandler, submitHandler, clear,
   } = props;
 
   const handleFilterChange = (e) => {
@@ -19,6 +19,10 @@ const SearchBar = (props) => {
 
   const handleSubmit = () => {
     submitHandler();
+  };
+
+  const handleClear = () => {
+    clear();
   };
 
   const mapOptions = (values) => {
@@ -43,6 +47,7 @@ const SearchBar = (props) => {
           <Option id="mealType" options={mealOptions} value={filters.mealType} />
         </div>
         <a href={link} className="submit background-white sans" type="button" onClick={handleSubmit}>Search</a>
+        <button className="submit background-white sans" type="button" onClick={handleClear}>Reset filters</button>
       </div>
     </div>
   );
@@ -58,6 +63,7 @@ SearchBar.propTypes = {
   link: PropTypes.string,
   filterHandler: PropTypes.func.isRequired,
   submitHandler: PropTypes.func,
+  clear: PropTypes.func.isRequired,
 };
 
 SearchBar.defaultProps = {

@@ -6,7 +6,7 @@ import SearchBar from '../components/SearchBar';
 
 const FoodsList = (props) => {
   const {
-    foods, filters, fetchFoods, changeFilters,
+    foods, filters, fetchFoods, changeFilters, clearFilters,
   } = props;
 
   const setFoods = async (ingredient, cuisine, from, to) => {
@@ -20,6 +20,10 @@ const FoodsList = (props) => {
 
   const handleSubmit = () => {
     setFoods(filters, 0, 99);
+  };
+
+  const handleClear = () => {
+    clearFilters();
   };
 
   useEffect(() => {
@@ -44,6 +48,7 @@ const FoodsList = (props) => {
         filters={filters}
         filterHandler={handleFilterChange}
         submitHandler={handleSubmit}
+        clear={handleClear}
       />
       <div className="flex wrap">
         {list}
@@ -60,6 +65,7 @@ FoodsList.propTypes = {
   }).isRequired,
   fetchFoods: PropTypes.func.isRequired,
   changeFilters: PropTypes.func.isRequired,
+  clearFilters: PropTypes.func.isRequired,
 };
 
 export default FoodsList;

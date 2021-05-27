@@ -6,7 +6,7 @@ import SearchBar from '../components/SearchBar';
 
 const FoodDetails = (props) => {
   const {
-    meal, filters, changeMeal, changeFilters,
+    meal, filters, changeMeal, changeFilters, clearFilters,
   } = props;
   const location = useLocation();
   const id = location.pathname.split('/')[2];
@@ -14,6 +14,10 @@ const FoodDetails = (props) => {
   const setFood = async (params, from, to) => {
     const [currentMeal] = await getData(params, from, to);
     changeMeal(currentMeal);
+  };
+
+  const handleClear = () => {
+    clearFilters();
   };
 
   useEffect(() => {
@@ -33,7 +37,7 @@ const FoodDetails = (props) => {
 
   return (
     <>
-      <SearchBar link="/" filters={filters} filterHandler={changeFilters} />
+      <SearchBar link="/" filters={filters} filterHandler={changeFilters} clear={handleClear} />
       <div className="details">
         <h2>{currentMeal.title}</h2>
         <img src={currentMeal.image} alt="Food" />
@@ -49,6 +53,7 @@ FoodDetails.propTypes = {
   filters: PropTypes.shape({}).isRequired,
   changeMeal: PropTypes.func.isRequired,
   changeFilters: PropTypes.func.isRequired,
+  clearFilters: PropTypes.func.isRequired,
 };
 
 export default FoodDetails;
