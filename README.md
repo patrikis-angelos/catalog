@@ -2,9 +2,9 @@
 
 # Catalogue
 
-This app is a catalogue of foods and drinks where the user can search for his favourite meals and apply filters on his search.
-Every meal has a details page that the user can access by clicking on the title and see the ingridients of the meal and a link to the recipe.
-The data are being pulled from the Edamam Recipies Api.
+This app is a catalog of foods and drinks where the user can search for his favorite meals and apply filters on his search.
+Every meal has a details page that the user can access by clicking on the title and see the ingredients of the meal and a link to the recipe.
+The data are being pulled from the Edamam Recipies API.
 
 ![](./docs/Dailymeal.png)
 
