@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav renders correctly 1`] = `
+<nav
+  className="nav flex space-between fixed background-green"
+>
+  <h1>
+    <a
+      href="#search"
+    >
+      DailyMeal
+    </a>
+  </h1>
+  <a
+    href="/"
+  >
+    Home
+  </a>
+</nav>
+`;

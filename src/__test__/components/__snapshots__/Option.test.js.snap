@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Option renders correctly 1`] = `
+<div
+  className="option-wrapper flex space-between relative"
+>
+  <select
+    className="option"
+    defaultValue="2"
+    id="cuisineType"
+  >
+    <option>
+      1
+    </option>
+    <option>
+      2
+    </option>
+    <option>
+      3
+    </option>
+  </select>
+  <div
+    className="arrow absolute"
+  />
+</div>
+`;

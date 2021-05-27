@@ -30,17 +30,22 @@ const FoodsList = (props) => {
     setFoods(filters, 0, 99);
   }, []);
 
-  const list = foods.map((food) => (
-    <Food
-      id={food.id}
-      title={food.title}
-      image={food.image}
-      cuisine={food.cuisine}
-      dish={food.dishType}
-      meal={food.mealType}
-      key={food.id}
-    />
-  ));
+  let list;
+  if (foods.length > 0) {
+    list = foods.map((food) => (
+      <Food
+        id={food.id}
+        title={food.title}
+        image={food.image}
+        cuisine={food.cuisine}
+        dish={food.dishType}
+        meal={food.mealType}
+        key={food.id}
+      />
+    ));
+  } else {
+    list = <p>Sorry we could not find any results</p>;
+  }
 
   return (
     <>

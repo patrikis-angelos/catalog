@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Food renders correctly 1`] = `
+<div
+  className="food"
+>
+  <a
+    className="title"
+    href="/details/1"
+  >
+    Test meal
+  </a>
+  <div
+    className="flex space-around"
+  >
+    <img
+      alt="Sorry, we couldn't find that image"
+      className="img"
+      src="url"
+    />
+  </div>
+   
+  <p
+    className="m-t-10"
+  >
+    Cusine:  cuisine
+  </p>
+  <ul
+    className="m-t-10"
+  >
+    <li>
+      dish
+    </li>
+  </ul>
+  <p
+    className="m-t-10"
+  >
+    Best for:  meal
+  </p>
+</div>
+`;
