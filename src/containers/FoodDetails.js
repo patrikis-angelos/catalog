@@ -5,8 +5,9 @@ import getData from '../assets/logic/fetch';
 import SearchBar from '../components/SearchBar';
 
 const FoodDetails = (props) => {
-  const { meal, changeMeal, changeFilters } = props;
-  console.log(meal);
+  const {
+    meal, filters, changeMeal, changeFilters,
+  } = props;
   const location = useLocation();
   const id = location.pathname.split('/')[2];
 
@@ -23,26 +24,20 @@ const FoodDetails = (props) => {
   const currentMeal = meal || [];
   let ingredientList = '';
   if (currentMeal.ingredients) {
-    ingredientList = currentMeal.ingredients.map((ing) => <p key={ing.text}>{ing.text}</p>);
-  }
-  let nutrients = '';
-  if (currentMeal.totalNutrients) {
-    nutrients = Object.keys(currentMeal.totalNutrients)
-      .map((nut) => (
-        <p key={currentMeal.totalNutrients[nut].label}>
-          {`${currentMeal.totalNutrients[nut].label}: ${currentMeal.totalNutrients[nut].quantity}`}
-        </p>
-      ));
+    let count = 0;
+    ingredientList = currentMeal.ingredients.map((ing) => {
+      count += 1;
+      return <p key={count}>{ing.text}</p>;
+    });
   }
 
   return (
     <>
-      <SearchBar link="/" filterHandler={changeFilters} />
+      <SearchBar link="/" filters={filters} filterHandler={changeFilters} />
       <div className="details">
         <h2>{currentMeal.title}</h2>
         <img src={currentMeal.image} alt="Food" />
         <div>{ingredientList}</div>
-        <div>{nutrients}</div>
         <a href={currentMeal.url} target="_blank" rel="noreferrer">Recipe</a>
       </div>
     </>
@@ -51,7 +46,7 @@ const FoodDetails = (props) => {
 
 FoodDetails.propTypes = {
   meal: PropTypes.shape({}).isRequired,
-  location: PropTypes.shape({ pathname: PropTypes.string.isRequired }).isRequired,
+  filters: PropTypes.shape({}).isRequired,
   changeMeal: PropTypes.func.isRequired,
   changeFilters: PropTypes.func.isRequired,
 };

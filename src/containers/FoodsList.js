@@ -40,7 +40,11 @@ const FoodsList = (props) => {
 
   return (
     <>
-      <SearchBar filterHandler={handleFilterChange} submitHandler={handleSubmit} />
+      <SearchBar
+        filters={filters}
+        filterHandler={handleFilterChange}
+        submitHandler={handleSubmit}
+      />
       <div className="flex wrap">
         {list}
       </div>

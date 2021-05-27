@@ -4,12 +4,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import FoodsList from './FoodsList';
 import FoodDetails from './FoodDetails';
-import { fetchFoods, changeFilters, changeMeal } from '../actions/index';
+import {
+  fetchFoods, changeFilters, changeMeal, clearFilters,
+} from '../actions/index';
 import storage from '../assets/logic/localStorage';
 
 function App(props) {
   const {
-    foods, filters, meal, fetchFoods, changeFilters, changeMeal,
+    foods, filters, meal, fetchFoods, changeFilters, changeMeal, clearFilters,
   } = props;
 
   useEffect(() => {
@@ -28,6 +30,7 @@ function App(props) {
               filters={filters}
               changeFilters={changeFilters}
               fetchFoods={fetchFoods}
+              clearFilters={clearFilters}
             />
           )}
         />
@@ -56,6 +59,7 @@ App.propTypes = {
   meal: PropTypes.shape({}).isRequired,
   fetchFoods: PropTypes.func.isRequired,
   changeFilters: PropTypes.func.isRequired,
+  clearFilters: PropTypes.func.isRequired,
   changeMeal: PropTypes.func.isRequired,
 };
 
@@ -68,6 +72,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   fetchFoods: (foods) => dispatch(fetchFoods(foods)),
   changeFilters: (filter, value) => dispatch(changeFilters(filter, value)),
+  clearFilters: () => dispatch(clearFilters()),
   changeMeal: (id) => dispatch(changeMeal(id)),
 });
 

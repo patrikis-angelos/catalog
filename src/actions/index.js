@@ -1,7 +1,10 @@
 const FETCH_FOODS = 'FETCH_FOODS';
 const CHANGE_FILTERS = 'CHANGE_FILTERS';
 const CHANGE_MEAL = 'CHANGE_MEAL';
-const actions = { FETCH_FOODS, CHANGE_FILTERS, CHANGE_MEAL };
+const CLEAR_FILTERS = 'CLEAR_FOODS';
+const actions = {
+  FETCH_FOODS, CLEAR_FILTERS, CHANGE_FILTERS, CHANGE_MEAL,
+};
 
 const fetchFoods = (foods) => (
   {
@@ -25,5 +28,13 @@ const changeMeal = (meal) => (
   }
 );
 
+const clearFilters = () => (
+  {
+    type: CLEAR_FILTERS,
+  }
+);
+
 export default actions;
-export { fetchFoods, changeFilters, changeMeal };
+export {
+  fetchFoods, changeFilters, changeMeal, clearFilters,
+};
