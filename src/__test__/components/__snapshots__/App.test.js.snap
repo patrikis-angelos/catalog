@@ -207,8 +207,10 @@ Object {
       <div
         class="flex wrap"
       >
-        <p>
-          Sorry we could not find any results
+        <p
+          class="empty sans"
+        >
+          Start searching for your favourite meals!
         </p>
       </div>
     </div>
@@ -416,8 +418,10 @@ Object {
     <div
       class="flex wrap"
     >
-      <p>
-        Sorry we could not find any results
+      <p
+        class="empty sans"
+      >
+        Start searching for your favourite meals!
       </p>
     </div>
   </div>,

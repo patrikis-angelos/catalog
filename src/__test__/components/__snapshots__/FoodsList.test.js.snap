@@ -210,8 +210,10 @@ Array [
   <div
     className="flex wrap"
   >
-    <p>
-      Sorry we could not find any results
+    <p
+      className="empty sans"
+    >
+      Start searching for your favourite meals!
     </p>
   </div>,
 ]
