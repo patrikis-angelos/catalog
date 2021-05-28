@@ -1,0 +1,61 @@
+.search-bar {
+  display: block;
+  width: 60%;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 0;
+  border: none;
+}
+
+.search-area {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.filters {
+  height: 250px;
+  padding-top: 50px;
+}
+
+.selection-wrapper {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.option-wrapper {
+  width: 33%;
+}
+
+.option {
+  height: 30px;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  appearance: none;
+}
+
+.arrow {
+  width: 5px;
+  height: 10px;
+  border-top: 10px solid #888;
+  border-bottom: 10px solid white;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  top: 10px;
+  right: 10px;
+}
+
+.submit {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 7px;
+  width: 19%;
+  margin-top: 20px;
+  height: 30px;
+}

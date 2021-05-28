@@ -1,0 +1,30 @@
+$black: #333;
+$green: #339a99;
+$blue: #669acc;
+$red: #9a0200;
+$orange: #f78d54;
+$pink: #cd6667;
+
+$colors: (
+  black: $black,
+  green: $green,
+  blue: $blue,
+  red: $red,
+  orange: $orange,
+  pink: $pink,
+  white: white,
+);
+
+@each $key, $value in $colors {
+  .color-#{"" + $key} {
+    color: $value;
+  }
+
+  .background-#{"" + $key} {
+    background-color: $value;
+  }
+}
+
+.submit:hover {
+  background-color: white;
+}
