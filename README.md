@@ -25,6 +25,8 @@ To get a local copy up and running
 `npm install`
 `npm run start` to start the server
 
+create a `.env` file in the root directory of your project and add your REACT_APP_ID and REACT_APP_KEY values that you can receive from the EDAMAM reciepes API.
+
 To run the tests
 
 `npm test`
@@ -48,6 +50,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - To Microverse for their `README` template.
+- To EDAMAM reciepes for their API
 
 ## 📝 [License]
 
