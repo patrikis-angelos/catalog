@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FoodsList renders correctly 1`] = `
+Array [
+  <div
+    className="search-area"
+    id="search"
+  >
+    <div
+      className="filters background-black"
+      onChange={[Function]}
+    >
+      <input
+        className="search-bar"
+        defaultValue=""
+        id="q"
+        placeholder="Search"
+        type="text"
+      />
+      <div
+        className="selection-wrapper flex space-between"
+      >
+        <div
+          className="option-wrapper flex space-between relative background-white"
+        >
+          <select
+            className="background-white option"
+            defaultValue=""
+            id="cuisineType"
+          >
+            <option>
+              Cuisine
+            </option>
+            <option>
+              American
+            </option>
+            <option>
+              Asian
+            </option>
+            <option>
+              British
+            </option>
+            <option>
+              Caribbean
+            </option>
+            <option>
+              Central Europe
+            </option>
+            <option>
+              Chinese
+            </option>
+            <option>
+              Eastern Europe
+            </option>
+            <option>
+              French
+            </option>
+            <option>
+              Indian
+            </option>
+            <option>
+              Italian
+            </option>
+            <option>
+              Japanese
+            </option>
+            <option>
+              Kosher
+            </option>
+            <option>
+              Mediterranean
+            </option>
+            <option>
+              Mexican
+            </option>
+            <option>
+              Middle Eastern
+            </option>
+            <option>
+              Nordic
+            </option>
+            <option>
+              South American
+            </option>
+            <option>
+              South East Asian
+            </option>
+          </select>
+          <div
+            className="arrow absolute"
+          />
+        </div>
+        <div
+          className="option-wrapper flex space-between relative background-white"
+        >
+          <select
+            className="background-white option"
+            defaultValue=""
+            id="dishType"
+          >
+            <option>
+              Dish
+            </option>
+            <option>
+              alcohol
+            </option>
+            <option>
+              biscuits and cookies
+            </option>
+            <option>
+              bread
+            </option>
+            <option>
+              cereals
+            </option>
+            <option>
+              condiments and sauces
+            </option>
+            <option>
+              drinks
+            </option>
+            <option>
+              desserts
+            </option>
+            <option>
+              egg
+            </option>
+            <option>
+              main course
+            </option>
+            <option>
+              omelet
+            </option>
+            <option>
+              pancake
+            </option>
+            <option>
+              preps
+            </option>
+            <option>
+              preserve
+            </option>
+            <option>
+              salad
+            </option>
+            <option>
+              sandwiches
+            </option>
+            <option>
+              soup
+            </option>
+            <option>
+              starter
+            </option>
+          </select>
+          <div
+            className="arrow absolute"
+          />
+        </div>
+        <div
+          className="option-wrapper flex space-between relative background-white"
+        >
+          <select
+            className="background-white option"
+            defaultValue=""
+            id="mealType"
+          >
+            <option>
+              Meal
+            </option>
+            <option>
+              Breakfast
+            </option>
+            <option>
+              Lunch
+            </option>
+            <option>
+              Dinner
+            </option>
+            <option>
+              Snack
+            </option>
+            <option>
+              Teatime
+            </option>
+          </select>
+          <div
+            className="arrow absolute"
+          />
+        </div>
+      </div>
+      <a
+        className="submit background-white sans"
+        href="#search"
+        onClick={[Function]}
+        type="button"
+      >
+        Search
+      </a>
+      <button
+        className="submit background-white sans"
+        id="submit"
+        onClick={[Function]}
+        type="button"
+      >
+        Reset filters
+      </button>
+    </div>
+  </div>,
+  <div
+    className="flex wrap"
+  >
+    <p
+      className="empty sans"
+    >
+      Start searching for your favourite meals!
+    </p>
+  </div>,
+]
+`;

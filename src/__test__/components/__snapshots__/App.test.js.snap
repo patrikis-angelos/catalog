@@ -1,0 +1,480 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="search-area"
+        id="search"
+      >
+        <div
+          class="filters background-black"
+        >
+          <input
+            class="search-bar"
+            id="q"
+            placeholder="Search"
+            type="text"
+            value=""
+          />
+          <div
+            class="selection-wrapper flex space-between"
+          >
+            <div
+              class="option-wrapper flex space-between relative background-white"
+            >
+              <select
+                class="background-white option"
+                id="cuisineType"
+              >
+                <option>
+                  Cuisine
+                </option>
+                <option>
+                  American
+                </option>
+                <option>
+                  Asian
+                </option>
+                <option>
+                  British
+                </option>
+                <option>
+                  Caribbean
+                </option>
+                <option>
+                  Central Europe
+                </option>
+                <option>
+                  Chinese
+                </option>
+                <option>
+                  Eastern Europe
+                </option>
+                <option>
+                  French
+                </option>
+                <option>
+                  Indian
+                </option>
+                <option>
+                  Italian
+                </option>
+                <option>
+                  Japanese
+                </option>
+                <option>
+                  Kosher
+                </option>
+                <option>
+                  Mediterranean
+                </option>
+                <option>
+                  Mexican
+                </option>
+                <option>
+                  Middle Eastern
+                </option>
+                <option>
+                  Nordic
+                </option>
+                <option>
+                  South American
+                </option>
+                <option>
+                  South East Asian
+                </option>
+              </select>
+              <div
+                class="arrow absolute"
+              />
+            </div>
+            <div
+              class="option-wrapper flex space-between relative background-white"
+            >
+              <select
+                class="background-white option"
+                id="dishType"
+              >
+                <option>
+                  Dish
+                </option>
+                <option>
+                  alcohol
+                </option>
+                <option>
+                  biscuits and cookies
+                </option>
+                <option>
+                  bread
+                </option>
+                <option>
+                  cereals
+                </option>
+                <option>
+                  condiments and sauces
+                </option>
+                <option>
+                  drinks
+                </option>
+                <option>
+                  desserts
+                </option>
+                <option>
+                  egg
+                </option>
+                <option>
+                  main course
+                </option>
+                <option>
+                  omelet
+                </option>
+                <option>
+                  pancake
+                </option>
+                <option>
+                  preps
+                </option>
+                <option>
+                  preserve
+                </option>
+                <option>
+                  salad
+                </option>
+                <option>
+                  sandwiches
+                </option>
+                <option>
+                  soup
+                </option>
+                <option>
+                  starter
+                </option>
+              </select>
+              <div
+                class="arrow absolute"
+              />
+            </div>
+            <div
+              class="option-wrapper flex space-between relative background-white"
+            >
+              <select
+                class="background-white option"
+                id="mealType"
+              >
+                <option>
+                  Meal
+                </option>
+                <option>
+                  Breakfast
+                </option>
+                <option>
+                  Lunch
+                </option>
+                <option>
+                  Dinner
+                </option>
+                <option>
+                  Snack
+                </option>
+                <option>
+                  Teatime
+                </option>
+              </select>
+              <div
+                class="arrow absolute"
+              />
+            </div>
+          </div>
+          <a
+            class="submit background-white sans"
+            href="#search"
+            type="button"
+          >
+            Search
+          </a>
+          <button
+            class="submit background-white sans"
+            id="submit"
+            type="button"
+          >
+            Reset filters
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex wrap"
+      >
+        <p
+          class="empty sans"
+        >
+          Start searching for your favourite meals!
+        </p>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="search-area"
+      id="search"
+    >
+      <div
+        class="filters background-black"
+      >
+        <input
+          class="search-bar"
+          id="q"
+          placeholder="Search"
+          type="text"
+          value=""
+        />
+        <div
+          class="selection-wrapper flex space-between"
+        >
+          <div
+            class="option-wrapper flex space-between relative background-white"
+          >
+            <select
+              class="background-white option"
+              id="cuisineType"
+            >
+              <option>
+                Cuisine
+              </option>
+              <option>
+                American
+              </option>
+              <option>
+                Asian
+              </option>
+              <option>
+                British
+              </option>
+              <option>
+                Caribbean
+              </option>
+              <option>
+                Central Europe
+              </option>
+              <option>
+                Chinese
+              </option>
+              <option>
+                Eastern Europe
+              </option>
+              <option>
+                French
+              </option>
+              <option>
+                Indian
+              </option>
+              <option>
+                Italian
+              </option>
+              <option>
+                Japanese
+              </option>
+              <option>
+                Kosher
+              </option>
+              <option>
+                Mediterranean
+              </option>
+              <option>
+                Mexican
+              </option>
+              <option>
+                Middle Eastern
+              </option>
+              <option>
+                Nordic
+              </option>
+              <option>
+                South American
+              </option>
+              <option>
+                South East Asian
+              </option>
+            </select>
+            <div
+              class="arrow absolute"
+            />
+          </div>
+          <div
+            class="option-wrapper flex space-between relative background-white"
+          >
+            <select
+              class="background-white option"
+              id="dishType"
+            >
+              <option>
+                Dish
+              </option>
+              <option>
+                alcohol
+              </option>
+              <option>
+                biscuits and cookies
+              </option>
+              <option>
+                bread
+              </option>
+              <option>
+                cereals
+              </option>
+              <option>
+                condiments and sauces
+              </option>
+              <option>
+                drinks
+              </option>
+              <option>
+                desserts
+              </option>
+              <option>
+                egg
+              </option>
+              <option>
+                main course
+              </option>
+              <option>
+                omelet
+              </option>
+              <option>
+                pancake
+              </option>
+              <option>
+                preps
+              </option>
+              <option>
+                preserve
+              </option>
+              <option>
+                salad
+              </option>
+              <option>
+                sandwiches
+              </option>
+              <option>
+                soup
+              </option>
+              <option>
+                starter
+              </option>
+            </select>
+            <div
+              class="arrow absolute"
+            />
+          </div>
+          <div
+            class="option-wrapper flex space-between relative background-white"
+          >
+            <select
+              class="background-white option"
+              id="mealType"
+            >
+              <option>
+                Meal
+              </option>
+              <option>
+                Breakfast
+              </option>
+              <option>
+                Lunch
+              </option>
+              <option>
+                Dinner
+              </option>
+              <option>
+                Snack
+              </option>
+              <option>
+                Teatime
+              </option>
+            </select>
+            <div
+              class="arrow absolute"
+            />
+          </div>
+        </div>
+        <a
+          class="submit background-white sans"
+          href="#search"
+          type="button"
+        >
+          Search
+        </a>
+        <button
+          class="submit background-white sans"
+          id="submit"
+          type="button"
+        >
+          Reset filters
+        </button>
+      </div>
+    </div>
+    <div
+      class="flex wrap"
+    >
+      <p
+        class="empty sans"
+      >
+        Start searching for your favourite meals!
+      </p>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
