@@ -40,7 +40,7 @@ const SearchBar = (props) => {
         className="filters background-black"
         onChange={(e) => handleFilterChange(e)}
       >
-        <input className="search-bar" id="q" type="text" placeholder="Search" defaultValue={filters.q} />
+        <input className="search-bar" id="q" type="text" placeholder="Search" value={filters.q} />
         <div className="selection-wrapper flex space-between">
           <Option id="cuisineType" options={cuisineOptions} value={filters.cuisineType} />
           <Option id="dishType" options={dishOptions} value={filters.dishType} />
