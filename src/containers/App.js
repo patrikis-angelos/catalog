@@ -16,10 +16,6 @@ function App(props) {
 
   const handleClear = () => {
     clearFilters();
-    document.querySelector('#q').value = '';
-    document.querySelector('#cuisineType').value = 'Cuisine';
-    document.querySelector('#dishType').value = 'Dish';
-    document.querySelector('#mealType').value = 'Meal';
   };
 
   useEffect(() => {

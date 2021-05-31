@@ -6,7 +6,7 @@ const Option = (props) => {
 
   return (
     <div className="option-wrapper flex space-between relative background-white">
-      <select className="background-white option" id={id} defaultValue={value}>{options}</select>
+      <select className="background-white option" id={id} value={value}>{options}</select>
       <div className="arrow absolute" />
     </div>
   );
